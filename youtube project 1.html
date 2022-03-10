@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://use.fontawesome.com/2dba32661c.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Responsive Admin Dashboard</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
@@ -93,21 +94,84 @@
 
     <div class="main">
         <div class="topbar">
-            <div class="toggle">
-                <div class="search">
-                    <label for="">
-                        <input type="text" placeholder="Search here">
-                    </label>
+            <div class="toggle" onclick="toggleMenu();">
+                
+                
+
+            </div>
+            <div class="search">
+                <label for="">
+                    <input type="text" placeholder="Search here">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+
+                </label>
+            </div>
+            <div class="user">
+                <img src="user.jpg" alt="" >
+
+            </div>
+        </div>
+
+        <div class="cardBox">
+            <div class="card">
+                <div>
+                    <div class="numbers">1,042</div>
+                    <div class="cardName">Daily Views</div>
                 </div>
-                <div class="user">
-                    <img src="user.jpg" alt="">
+                <div class="iconBox">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">80</div>
+                    <div class="cardName">Sales</div>
+                </div>
+                <div class="iconBox">
+                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">200</div>
+                    <div class="cardName">Comments</div>
+                </div>
+                <div class="iconBox">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">$6,042</div>
+                    <div class="cardName">Earnings</div>
+                </div>
+                <div class="iconBox">
+                    <i class="fa fa-usd" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="details">
+                <div>
 
                 </div>
 
             </div>
-
+            
         </div>
     </div>
+   
+
+    <script>
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
